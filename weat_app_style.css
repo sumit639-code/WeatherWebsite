@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Nanum+Gothic+Coding&family=Poppins:wght@300;400;500;900&family=Raleway:wght@200;400;500&family=Source+Code+Pro:wght@400;900&display=swap');
+
+
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+    /* border:2px solid grey; */
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.313);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-corner{
+    background-color: aliceblue;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+::-webkit-scrollbar-track-piece{
+    background: transparent;
+}
+
+body{
+    box-sizing: content-box;
+    padding: 0%;
+    margin: 0%;
+    background-color: rgb(255, 255, 255);
+    transition: 500ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow-x: hidden; */
+}
+header{
+    
+    width: 100%;
+    /* margin: 10px; */
+}
+.section{
+    transition: 600ms;
+    text-align: end;
+    /* margin: 10px; */
+    padding: 20px;
+    border-radius: 0px;
+    background-color: rgb(53, 235, 190);
+}
+#logo{
+    float: left;
+    font-family: Source Code Pro;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.main_1{
+    transition: 300ms;
+    margin: 10px;
+    padding: 10px;
+    font-family: raleway;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    
+}
+#headside{
+    background-color: rgba(255, 255, 255, 0.413);
+    border-radius: 10px;
+    margin-right: 30px;
+}
+
+.main_1:hover{
+    background-color: rgba(255, 255, 255, 0.377);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.title{
+    width: 100vw;
+    margin-top: 80px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-family: raleway;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size:18px;
+}
+.wrapper{
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
+    transition: opacity .25s,visibility 1s;
+
+}
+.fade{
+    opacity: 0;
+    visibility: hidden;
+}
+.load{
+    width: 10px;
+    height: 0px;
+    background-color: rgb(53, 235, 190);
+    border-radius: 50px;
+    animation-name: loader;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    transition: 200ms;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.032);
+    
+}
+/* @keyframes loader {
+    0% {transform: translateY(0px);height: 0px;}
+    25%{width: 10px;}
+    50%{transform: translateY(-30px);width: 30px;}
+    75%{width: 10px;}
+    100%{transform: translateY(0px);}
+} */
+@keyframes loader {
+    0%{height: 0px;width: 0px;}
+    40%{
+        height: 30px;
+        transform: translateY(-80px);
+    }
+    65%{
+        height: 30px;
+        width: 30px;
+    }
+    100%{height: 0px;width: 30px;}
+}
+.ongoing{
+    transition: 400ms;
+    
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: raleway;
+    font-weight: bold;
+    animation-name: ongoing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes ongoing {
+    from{}
+    
+}
+
+
+.footer{
+    width:600px;
+    margin: 10px;
+    /* padding: 10px; */
+    border:1px solid grey;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden;
+    animation-name: foot;
+    animation-duration: 2s;
+    animation-delay: 2.5s;
+}
+@keyframes foot {
+    from{width: 0px;}
+    to{width: 600px;}
+}
+.footer a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: source code pro;
+    margin: 10px;
+}
+#twitter{
+    color: rgb(29, 161, 242);
+}
+#linkdin{
+    color: rgb(0, 119, 181);
+}
+
+.weather{
+    background-color: rgb(255, 255, 255);
+    width: 250px;
+    height: 320px;
+    border: 1px solid rgba(0, 0, 0, 0.301);
+    border-radius: 30px;
+    margin: 150px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: poppins;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.247);
+    overflow: hidden;
+    opacity: 0;
+    transition: 500ms;
+
+}
+.icon{
+    animation-name:weathername ;
+    animation-duration: 3.5s;
+    animation-delay: 2.2s;
+}
+.temp{
+    font-size: 30px;
+    color: rgb(0, 205, 191);
+    padding-bottom: 8px;
+    animation-name:weathername ;
+    animation-duration: 3.5s;
+    animation-delay: 2s;
+}
+.humidity,.wind{
+    font-size: 12px;
+    animation-name:weathername ;
+    animation-duration: 3.5s;
+    animation-delay: 1.6s;
+}
+.location{
+    padding-bottom: 15px;
+    animation-name:weathername ;
+    animation-duration: 3.5s;
+    animation-delay: 1.8s;
+}
+.name_weather{
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 0px;
+    animation-name:weathername ;
+    animation-duration: 3.5s;
+    animation-delay: 2.4s;
+}
+@keyframes weathername {
+    from{transform: translateY(-1000px);}
+    to{transform: translateY(0px);}
+}
